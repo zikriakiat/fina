@@ -13,16 +13,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private ListView listView;
+    private DaftarAdapter daftarAdapter;
+    private List<DaftarItem> daftarItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,6 +47,31 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        String[] nama = new String[]{
+                "Salon 1",
+                "salon 2",
+                "salon 3"
+        };
+
+        String[] alamat = new String[]{
+                "Alamat 1",
+                "Alamat 2",
+                "Alamat 3"
+        };
+
+        String[] jarak = new String[]{
+                "Jarak 1",
+                "Jarak 2",
+                "Jarak 3"
+        };
+
+        ArrayList al = new ArrayList();
+
+        al.add(nama);
+        al.add(alamat);
+        al.add(jarak);
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
