@@ -25,7 +25,7 @@
         android:id="@+id/About_txtview"
         android:background="@android:color/transparent"
         android:autoText="false"
-        android:text="Aplikasi Salon Jenong\n Versi 1.0\n Sadiki Oke Lai\nKKK"
+        android:text="Aplikasi Salon \n Versi 1.0\n Sadiki Oke Lai\nKKK"
         android:textSize="20dp"
         android:textAlignment="center"
         android:layout_alignParentBottom="true"
